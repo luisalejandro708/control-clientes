@@ -43,14 +43,14 @@ export class EditarClienteComponent implements OnInit {
     else{
       //modificar nuevo cliente
       this.ClientesServicio.modificarCliente(this.cliente);
-      this.router.navigate(['/']);
+      this.router.navigate(['/login']);
     }
   }
 
   eliminar(){
     if(confirm('¿Seguro que desea eliminar el cliente?')){
       this.ClientesServicio.eliminarCliente(this.cliente);
-      this.router.navigate(['/']);
+      this.router.navigate(['/login']);
     }
   }
 }
